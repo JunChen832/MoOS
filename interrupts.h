@@ -32,6 +32,7 @@ class InterruptManager {
 friend class InterruptHandler;
 protected:
 
+	//单例模式的InterruptManager
     static InterruptManager* activeInterruptManager;
 
     InterruptHandler* handlers[256];

@@ -25,6 +25,7 @@ extern "C" void kernelMain(const void* multiboot_structure, unsigned int multibo
     GlobalDescriptorTable gdt;
     puts("done");
 
+	//引入interrupts，并在主函数kernelMain中加入全局描述符表GDT和中断管理类。
     print("[kernel - kernelMain] instanciating interrupt manager... ");
     InterruptManager interrupts(&gdt);
     puts("done");
@@ -52,8 +53,5 @@ extern "C" void kernelMain(const void* multiboot_structure, unsigned int multibo
     while(true) {
 
     }
-	for (int i = 0; int i < $limit$; ++int i)
-		{
-		$end$
-		}
+
 }
